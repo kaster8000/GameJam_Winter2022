@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 /*
  randomly generate a time for lightning to strike 
@@ -13,29 +14,48 @@ public class LightningController : MonoBehaviour
     public float minTimeInterval = 4f;
     public float maxTimeInterval = 10f;
 
+    [Header("Lightning Light Intesities")]
+    public float flashIntensity;
+    public float warningIntensity;
+    public float fallOffSpeed;
+    public float increaseSpeed;
+
     //timer floats
     float timeInterval;
     float nextInterval;
+
+    public Light2D lightningLight;
 
     // Start is called before the first frame update
     void Start()
     {
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
+        nextInterval = Time.time + timeInterval;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //warning
         if ((nextInterval - Time.time) <= 3)
         {
             //play lightning audio cue
+            lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, warningIntensity, increaseSpeed * Time.deltaTime);
         }
-
+        //base
+        else if (Time.time < nextInterval)
+        {
+            lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, 0f, fallOffSpeed * Time.deltaTime);
+        }
+        //flash
         if (Time.time > nextInterval)
         {
             //play lightning strike
+            lightningLight.intensity = flashIntensity;
             timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
             nextInterval = Time.time + timeInterval;
         }
     }
+
+
 }
