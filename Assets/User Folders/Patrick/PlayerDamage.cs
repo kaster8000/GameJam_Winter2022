@@ -10,14 +10,13 @@ public class PlayerDamage : MonoBehaviour
     public int DamageTaken;
     public float HitDelay;
     float HitInterval;
-
+   
     void Start()
     {
+        
         Health = MaxHealth;
         HitInterval = Time.time + HitDelay;
     }
-
-
 
     private void OnTriggerStay2D(Collider2D collision)
     {
