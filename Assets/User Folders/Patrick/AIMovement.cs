@@ -68,6 +68,7 @@ public class AIMovement : MonoBehaviour
     // togle when the player gets hunted
     public void TogleHuntingPlayer(bool i)
     {
+        Debug.Log("Called " + i);
         GoForPlayer = i;
     }
 
