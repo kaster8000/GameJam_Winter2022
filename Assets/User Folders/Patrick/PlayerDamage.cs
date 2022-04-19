@@ -7,15 +7,18 @@ public class PlayerDamage : MonoBehaviour
     public int MaxHealth;
     public int Health;
     public int DamageTaken;
-
+    public float HitDelay;
+    float HitInterval;
 
     void Start()
     {
         Health = MaxHealth;
+        HitInterval = Time.time + HitDelay;
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         // checks if the enemy tag hits the player might be a bug if the same enemy bumps in to the player twice 
         if (collision.gameObject.CompareTag("Enemy"))
@@ -27,18 +30,26 @@ public class PlayerDamage : MonoBehaviour
 
     public void TakePlayerDamage(int i)
     {
-        // the logic for damage 
-        Health = Health - i;
-        if(Health <= 0)
+        if(Time.time > HitInterval)
         {
-            Debug.Log("Dead");
-            // play partical or animation
-            Invoke("DeathMenu", 1);
+            // the logic for damage 
+            Health = Health - i;
+            HitInterval = Time.time + HitDelay;
+            if (Health <= 0)
+            {
+                Debug.Log("Dead");
+                GetComponent<PlayerMovement>().TogleCanMove(false);
+                // play partical or animation
+                Time.timeScale = 0;
+                Invoke("DeathMenu", 1);
+            }
+
         }
+       
     }
     public void DeathMenu()
     {
-        // how death menu 
+        // show death menu 
     }
 
 }
