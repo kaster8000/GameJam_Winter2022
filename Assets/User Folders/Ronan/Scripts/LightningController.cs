@@ -30,9 +30,12 @@ public class LightningController : MonoBehaviour
     public bool LightingFlashed;
     public Light2D lightningLight;
 
+    PlayerDamage M_PlayerDamage;
+
     // Start is called before the first frame update
     void Start()
     {
+        M_PlayerDamage = FindObjectOfType<PlayerDamage>();
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
         nextInterval = Time.time + timeInterval;
     }
@@ -62,7 +65,9 @@ public class LightningController : MonoBehaviour
             HuntInterval = Time.time + EnemyHuntingTime;
             //Debug.Log("flash");
             LightingFlashed = true;
-            UpdateEnemys(true);
+
+             UpdateEnemys(true);
+
         }
         if(lightningLight == true && Time.time > HuntInterval)
         {
@@ -70,6 +75,17 @@ public class LightningController : MonoBehaviour
             LightingFlashed = false;
             UpdateEnemys(false);
         }
+        else if(lightningLight == true && Time.time < HuntInterval)
+        {
+            if (M_PlayerDamage.InCover)
+            {
+                UpdateEnemys(false);
+            }
+            else
+                UpdateEnemys(true);
+
+        }
+
 
     }
 

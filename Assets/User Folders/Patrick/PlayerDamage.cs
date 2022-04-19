@@ -10,12 +10,28 @@ public class PlayerDamage : MonoBehaviour
     public int DamageTaken;
     public float HitDelay;
     float HitInterval;
-   
+    public bool InCover;
+    public LayerMask GroundCheck;
     void Start()
     {
         
         Health = MaxHealth;
         HitInterval = Time.time + HitDelay;
+    }
+
+    private void Update()
+    {
+        Collider2D GroundRay = Physics2D.OverlapCircle(this.transform.position, 0.2f, GroundCheck);
+        if (GroundRay != null)
+        {
+            //Debug.Log("in Cover");
+            InCover = true;
+        }
+        else
+        {
+            //Debug.Log("OutCover");
+            InCover = false;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
