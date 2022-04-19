@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class PlayerDamage : MonoBehaviour
 {
@@ -38,9 +39,14 @@ public class PlayerDamage : MonoBehaviour
             if (Health <= 0)
             {
                 Debug.Log("Dead");
+                // stops player And Ai from moving  
                 GetComponent<PlayerMovement>().TogleCanMove(false);
+                var temp = FindObjectsOfType<AIPath>();
+                foreach( AIPath t in temp)
+                {
+                    t.canMove = false;
+                }
                 // play partical or animation
-                Time.timeScale = 0;
                 Invoke("DeathMenu", 1);
             }
 
