@@ -12,9 +12,10 @@ public class PlayerDamage : MonoBehaviour
     float HitInterval;
     public bool InCover;
     public LayerMask GroundCheck;
+    public GameObject DeathCanvas;
     void Start()
     {
-        
+        DeathCanvas.SetActive(false);
         Health = MaxHealth;
         HitInterval = Time.time + HitDelay;
     }
@@ -70,7 +71,9 @@ public class PlayerDamage : MonoBehaviour
     }
     public void DeathMenu()
     {
+        Time.timeScale = 0;
         // show death menu 
+        DeathCanvas.SetActive(true);
     }
 
 }
