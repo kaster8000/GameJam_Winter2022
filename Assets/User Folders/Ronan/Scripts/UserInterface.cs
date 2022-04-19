@@ -17,9 +17,4 @@ public class UserInterface : MonoBehaviour
     {
         SceneManager.LoadScene(level);
     }
-
-    public void LoadMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
 }
