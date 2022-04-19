@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4387299536374444855}
   - component: {fileID: 4387299536374444848}
   - component: {fileID: 4387299536374444812}
+  - component: {fileID: 859406812736880516}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -205,3 +206,12 @@ MonoBehaviour:
   GroundCheck:
     serializedVersion: 2
     m_Bits: 128
+  DeathCanvas: {fileID: 0}
+--- !u!81 &859406812736880516
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387299536374444813}
+  m_Enabled: 1
