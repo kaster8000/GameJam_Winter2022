@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,10 +10,25 @@ public class GameManager : MonoBehaviour
     public int PickUpCount;
     int TotalFoundPickUp;
     public GameObject PauseCanvas;
+    public GameObject PauseLayout;
+    public GameObject OptionsLayout;
+    public TextMeshProUGUI Flashtext;
     bool IsGamePaused;
+    bool FlashTogle;
     private void Start()
     {
+        if (PlayerPrefs.GetInt("FlashSave") == 0)
+        {
+            FlashTogle = false;
+            Flashtext.SetText("Disabled");
+        }
+        else if (PlayerPrefs.GetInt("FlashSave") == 1)
+        {
+            FlashTogle = true;
+            Flashtext.SetText("Enabled");
+        }
         PauseCanvas.SetActive(false);
+        OptionsLayout.SetActive(false);
         GoalUnlocked = false;
         var temp = GameObject.FindGameObjectsWithTag("PickUp");
         foreach (GameObject i in temp)
@@ -65,8 +81,26 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-    public void Options()
+    public void TogleOptions(bool i)
     {
-        // show options
+        OptionsLayout.SetActive(i);
+        PauseLayout.SetActive(!i);
+    }
+    public void Flash()
+    {
+        if (FlashTogle)
+        {
+            // disable
+            Flashtext.SetText("Disabled");
+            PlayerPrefs.SetInt("FlashSave", 0);
+            FlashTogle = false;
+        }
+        else
+        {
+            // enable
+            Flashtext.SetText("Enabled");
+            PlayerPrefs.SetInt("FlashSave", 1);
+            FlashTogle = true;
+        }
     }
 }

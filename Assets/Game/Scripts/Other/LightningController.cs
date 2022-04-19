@@ -17,9 +17,13 @@ public class LightningController : MonoBehaviour
 
     [Header("Lightning Light Intesities")]
     public float flashIntensity;
+    float CashedFlashIntensity;
     public float warningIntensity;
+    float CashedWarningIntensity;
     public float fallOffSpeed;
+    float CashedFallOffSpeed;
     public float increaseSpeed;
+    float CashedIncreaseSpeed;
 
     //timer floats
     float timeInterval;
@@ -32,17 +36,25 @@ public class LightningController : MonoBehaviour
 
     PlayerDamage M_PlayerDamage;
 
+    
     // Start is called before the first frame update
     void Start()
     {
         M_PlayerDamage = FindObjectOfType<PlayerDamage>();
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
         nextInterval = Time.time + timeInterval;
+
+        SaveStartinfo();
+        UpdateFlash();
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateFlash();
         //warning
         if ((nextInterval - Time.time) <= 3f)
         {
@@ -98,5 +110,33 @@ public class LightningController : MonoBehaviour
         }
     }
 
+    void SaveStartinfo()
+    {
+        CashedFallOffSpeed = fallOffSpeed;
+        CashedFlashIntensity = flashIntensity;
+        CashedIncreaseSpeed = increaseSpeed;
+        CashedWarningIntensity = warningIntensity;
 
+       
+    }
+    void UpdateFlash()
+    {
+        if (PlayerPrefs.GetInt("FlashSave") == 0)
+        {
+            // do normal settings
+            flashIntensity = CashedFlashIntensity;
+            warningIntensity = CashedWarningIntensity;
+            fallOffSpeed = CashedFallOffSpeed;
+            increaseSpeed = CashedIncreaseSpeed;
+
+        }
+        else if (PlayerPrefs.GetInt("FlashSave") == 1)
+        {
+            // do changed settings
+            flashIntensity = 0.55f;
+            warningIntensity = 0.65f;
+            fallOffSpeed = 0.5f;
+            increaseSpeed = 0.5f;
+        }
+    }
 }
