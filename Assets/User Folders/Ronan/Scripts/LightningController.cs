@@ -15,11 +15,13 @@ public class LightningController : MonoBehaviour
     public float maxTimeInterval = 10f;
     public float EnemyHuntingTime;
 
-    [Header("Lightning Light Intesities")]
-    public float flashIntensity;
-    public float warningIntensity;
-    public float fallOffSpeed;
-    public float increaseSpeed;
+    //[Header("Lightning Light Intesities")]
+    //public float flashIntensity;
+    //public float warningIntensity;
+    //public float fallOffSpeed;
+    //public float increaseSpeed;
+
+    Animator lightningAnim;
 
     //timer floats
     float timeInterval;
@@ -35,33 +37,27 @@ public class LightningController : MonoBehaviour
     {
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
         nextInterval = Time.time + timeInterval;
+        lightningAnim = lightningLight.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //warning
-        if ((nextInterval - Time.time) <= 3)
+        if ((nextInterval - Time.time) <= 3f)
         {
             //play lightning audio cue
-            lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, warningIntensity, increaseSpeed * Time.deltaTime);
+            lightningAnim.SetTrigger("Warning");
             //Debug.Log("warning");
         }
-        //base
-        else if (Time.time < nextInterval)
-        {
-            lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, 0f, fallOffSpeed * Time.deltaTime);
-            //Debug.Log("base");
-
-        }
         //flash
-        if (Time.time > nextInterval)
+        if (Time.time >= nextInterval)
         {
             //play lightning strike
-            lightningLight.intensity = flashIntensity;
             timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
             nextInterval = Time.time + timeInterval;
             HuntInterval = Time.time + EnemyHuntingTime;
+            lightningAnim.ResetTrigger("Warning");
             //Debug.Log("flash");
             LightingFlashed = true;
             UpdateEnemys(true);

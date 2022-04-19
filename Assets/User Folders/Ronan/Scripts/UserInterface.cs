@@ -8,12 +8,12 @@ using UnityEngine.Audio;
 public class UserInterface : MonoBehaviour
 {
 
-    public void QuitGame()
+    public static void QuitGame()
     {
         Application.Quit();
     }
 
-    public void LoadLevel(string level)
+    public static void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
     }
