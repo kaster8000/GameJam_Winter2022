@@ -12,13 +12,18 @@ public class AIMovement : MonoBehaviour
 
     AIDestinationSetter M_AIDestinationSetter;
     AIPath M_AIPath;
-    
+    public bool RandomStart;
     public List<GameObject> ObjectPoints;
     public int ObjectInt;
     
 
     void Start()
     {
+        
+        if(RandomStart)
+        {
+            ObjectInt = Random.Range(0, ObjectPoints.Count);
+        }
         // gets refreces for the player, AIDestinationSetter, and AIPath
         Player = FindObjectOfType<PlayerMovement>().gameObject;
         M_AIDestinationSetter = GetComponent<AIDestinationSetter>();

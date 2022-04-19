@@ -136,6 +136,7 @@ MonoBehaviour:
   GoForPlayer: 0
   PlayerHuntingSpeed: 18
   NromalHuntingSpeed: 8
+  RandomStart: 1
   ObjectPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -172,7 +173,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8233f498606bd314b8b3ff9f52375132, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 68487618cc2bf9e4c8347a1f5a8a2e37, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -183,7 +184,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
