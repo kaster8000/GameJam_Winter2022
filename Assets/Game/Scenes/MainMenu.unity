@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1883,13 +1883,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 983136479}
   m_HandleRect: {fileID: 875804305}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1398243013}
+        m_TargetAssemblyTypeName: SetVol, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1398243009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1913,7 @@ GameObject:
   - component: {fileID: 1398243012}
   - component: {fileID: 1398243011}
   - component: {fileID: 1398243010}
+  - component: {fileID: 1398243013}
   m_Layer: 0
   m_Name: LightningLight
   m_TagString: Untagged
@@ -1984,6 +1997,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398243013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398243009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bc361cea577f049944a8a22bb56e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textVol: {fileID: 2017786317}
+  mixer: {fileID: 24100000, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+  slider: {fileID: 1307321045}
+  textVolMath: 0
+  MixerStringVolName: MasterVol
+  PlayerPrefString: MusicVol
 --- !u!1 &1517714585
 GameObject:
   m_ObjectHideFlags: 0

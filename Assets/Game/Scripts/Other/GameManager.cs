@@ -6,6 +6,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
+    public AudioManager GlobalAudioManager;
+    public MusicController GlobalMusicController;
+
     public bool GoalUnlocked;
     public int PickUpCount;
     int TotalFoundPickUp;
@@ -15,8 +19,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI Flashtext;
     bool IsGamePaused;
     bool FlashTogle;
-    private void Start()
+    private void Awake()
     {
+
+        GlobalAudioManager = FindObjectOfType<AudioManager>();
+        GlobalMusicController = FindObjectOfType<MusicController>();
+
+
         if (PlayerPrefs.GetInt("FlashSave") == 0)
         {
             FlashTogle = false;

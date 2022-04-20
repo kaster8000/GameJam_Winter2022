@@ -2198,6 +2198,7 @@ GameObject:
   - component: {fileID: 1858052403094943707}
   - component: {fileID: 1858052403094943706}
   - component: {fileID: 1858052403094943705}
+  - component: {fileID: 375631461203835569}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -2287,6 +2288,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &375631461203835569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858052403094943704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bc361cea577f049944a8a22bb56e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textVol: {fileID: 3170902795449493050}
+  mixer: {fileID: 24100000, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+  slider: {fileID: 591010142884968692}
+  textVolMath: 0
+  MixerStringVolName: MasterVol
+  PlayerPrefString: MusicVol
 --- !u!1 &1875302504644706161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,10 +3347,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 6488741886606430331}
   m_HandleRect: {fileID: 3325623263942828442}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

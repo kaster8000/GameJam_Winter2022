@@ -35,12 +35,18 @@ public class LightningController : MonoBehaviour
     public Light2D lightningLight;
 
     PlayerDamage M_PlayerDamage;
+    GameManager M_GameManager;
+    AudioManager M_AudioManager;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
         M_PlayerDamage = FindObjectOfType<PlayerDamage>();
+        M_GameManager = FindObjectOfType<GameManager>();
+        if(M_GameManager != null)
+            M_AudioManager = M_GameManager.GlobalAudioManager;
+
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
         nextInterval = Time.time + timeInterval;
 
@@ -60,7 +66,9 @@ public class LightningController : MonoBehaviour
         {
             //play lightning audio cue
             lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, warningIntensity, increaseSpeed * Time.deltaTime);
-            //Debug.Log("warning");
+            if(M_AudioManager != null)
+                M_AudioManager.PlaySound("ThunderWarning");
+            Debug.Log("warning");
         }
         //base
         else if (Time.time < nextInterval)
@@ -71,11 +79,13 @@ public class LightningController : MonoBehaviour
         if (Time.time >= nextInterval)
         {
             //play lightning strike
+            if (M_AudioManager != null)
+                M_AudioManager.PlaySound("ThunderStrike");
             lightningLight.intensity = flashIntensity;
             timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
             nextInterval = Time.time + timeInterval;
             HuntInterval = Time.time + EnemyHuntingTime;
-            //Debug.Log("flash");
+            Debug.Log("flash");
             LightingFlashed = true;
 
              UpdateEnemys(true);
