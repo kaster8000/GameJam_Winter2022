@@ -47,8 +47,7 @@ public class LightningController : MonoBehaviour
         if(M_GameManager != null)
             M_AudioManager = M_GameManager.GlobalAudioManager;
 
-        timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
-        nextInterval = Time.time + timeInterval;
+        nextInterval = Time.time + 3.1f;
 
         SaveStartinfo();
         UpdateFlash();

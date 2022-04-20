@@ -44,9 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c151a771262514abb65a293e0ae308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GlobalAudioManager: {fileID: 0}
+  GlobalMusicController: {fileID: 0}
   GoalUnlocked: 0
   PickUpCount: 0
   PauseCanvas: {fileID: 0}
+  PauseLayout: {fileID: 0}
+  OptionsLayout: {fileID: 0}
+  Flashtext: {fileID: 0}
 --- !u!114 &4360874419669204754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,10 +64,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08175bf6696768943a9a80dcdc78335c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeInterval: 10
-  maxTimeInterval: 12
-  EnemyHuntingTime: 3
-  flashIntensity: 0.8
+  minTimeInterval: 5
+  maxTimeInterval: 10
+  EnemyHuntingTime: 2
+  flashIntensity: 1.35
   warningIntensity: 0.65
   fallOffSpeed: 1
   increaseSpeed: 0.5
