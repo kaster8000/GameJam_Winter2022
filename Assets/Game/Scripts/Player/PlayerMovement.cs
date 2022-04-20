@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        CanMove = true;
+        //CanMove = true;
         Rb = GetComponent<Rigidbody2D>();
     }
 
