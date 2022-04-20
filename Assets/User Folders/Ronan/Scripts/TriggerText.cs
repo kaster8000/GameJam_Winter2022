@@ -11,6 +11,7 @@ public class TriggerText : MonoBehaviour
         if (collision.tag == "Player")
         {
             narrativeText.SetActive(true);
+            gameObject.GetComponent<Collider2D>().enabled = false;
         }
     }
 }
