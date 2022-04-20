@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TextboxController : MonoBehaviour
 {
 
-    //textbox animations and control
+    [Header("textbox animations and control")]
     public GameObject[] texts;
     public Animator textbox;
     Animator thisAnim;
     int currentText = 0;
 
-    //external game references for choreography
+    [Header("External Game Refs")]
     public PlayerMovement pm;
     public LightningController lc;
     public AIMovement aiMove;
-    public Animator globalAnim;
+    public Animator extAnim;
+    public string extAnimName;
     public GameObject[] gameObjectsToActivate;
     //public GameObject cinematicBars;
 
@@ -65,9 +67,9 @@ public class TextboxController : MonoBehaviour
 
     }
 
-    void SetGlobalAnim()
+    void PlayAnim()
     {
-        globalAnim.Play("Test2");
+        extAnim.Play(extAnimName);
     }
 
     void SetActive()
