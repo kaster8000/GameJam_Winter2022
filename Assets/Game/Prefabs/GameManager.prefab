@@ -64,8 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08175bf6696768943a9a80dcdc78335c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeInterval: 5
-  maxTimeInterval: 10
+  minTimeInterval: 7
+  maxTimeInterval: 12
   EnemyHuntingTime: 2
   flashIntensity: 1.35
   warningIntensity: 0.65

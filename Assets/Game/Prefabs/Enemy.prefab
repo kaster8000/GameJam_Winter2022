@@ -137,7 +137,7 @@ MonoBehaviour:
   CanTargetPlayer: 1
   GoForPlayer: 0
   PlayerHuntingSpeed: 18
-  NromalHuntingSpeed: 5
+  NromalHuntingSpeed: 3
   RandomStart: 1
   ObjectPoints:
   - {fileID: 0}
@@ -207,7 +207,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 6.3606915
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
