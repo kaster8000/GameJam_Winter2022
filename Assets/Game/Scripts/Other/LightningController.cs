@@ -139,4 +139,9 @@ public class LightningController : MonoBehaviour
             increaseSpeed = 0.5f;
         }
     }
+
+    public void SetNextInterval(float value)
+    {
+        nextInterval = value;
+    }
 }

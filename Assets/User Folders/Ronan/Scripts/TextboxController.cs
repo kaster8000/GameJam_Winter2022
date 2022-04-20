@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class TextboxController : MonoBehaviour
 {
-    //public playerControllerScript pc;
-    //public GameObject cinematicBars;
+
+    //textbox animations and control
     public GameObject[] texts;
-    //public GameObject portal;
-    public Animator globalAnim;
     public Animator textbox;
     Animator thisAnim;
     int currentText = 0;
-    public string invokeMethodEnd;
+
+    //external game references for choreography
+    public PlayerMovement pm;
+    public LightningController lc;
+    public AIMovement aiMove;
+    public Animator globalAnim;
+    public GameObject[] gameObjectsToActivate;
+    //public GameObject cinematicBars;
+
+    //for if you need to invoke a method from this script
+    public string[] invokeMethodOnEnd;
 
     // Start is called before the first frame update
     void Start()
     {
         //cinematicBars.SetActive(true);
-        //pc.canMove = false;
+        pm.CanMove = false;
         thisAnim = GetComponent<Animator>();
         currentText = 0;   
     }
@@ -43,10 +51,13 @@ public class TextboxController : MonoBehaviour
             thisAnim.SetTrigger("TriggerFade");
             Destroy(gameObject, 0.12f);
             //cinematicBars.SetActive(false);
-            //pc.canMove = true;
-            if (invokeMethodEnd != string.Empty)
+            pm.CanMove = true;
+            if (invokeMethodOnEnd.Length != 0)
             {
-                Invoke(invokeMethodEnd, 0);
+                foreach (string str in invokeMethodOnEnd)
+                {
+                    Invoke(str, 0);
+                } 
             }
         }
         texts[currentText].SetActive(true);
@@ -56,5 +67,23 @@ public class TextboxController : MonoBehaviour
     void SetGlobalAnim()
     {
         globalAnim.Play("Test2");
+    }
+
+    void SetActive()
+    {
+        foreach (GameObject go in gameObjectsToActivate)
+        {
+            go.SetActive(true);
+        }
+    }
+
+    void ActivateAI()
+    {
+        aiMove.CanTargetPlayer = true;
+    }
+
+    void TriggerLightning()
+    {
+        lc.nextInterval;
     }
 }
