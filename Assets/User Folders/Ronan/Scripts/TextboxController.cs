@@ -84,6 +84,6 @@ public class TextboxController : MonoBehaviour
 
     void TriggerLightning()
     {
-        lc.nextInterval;
+        lc.SetNextInterval(3);
     }
 }
