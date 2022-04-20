@@ -1227,9 +1227,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 481783918, guid: 8951829211696d946a378206932e0e30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 481783918, guid: 8951829211696d946a378206932e0e30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1712117640}
+    - target: {fileID: 481783918, guid: 8951829211696d946a378206932e0e30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Replay
+      objectReference: {fileID: 0}
     - target: {fileID: 1460621249, guid: 8951829211696d946a378206932e0e30, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1271,9 +1279,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1594780867, guid: 8951829211696d946a378206932e0e30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594780867, guid: 8951829211696d946a378206932e0e30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1712117640}
+    - target: {fileID: 1594780867, guid: 8951829211696d946a378206932e0e30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogleOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594780867, guid: 8951829211696d946a378206932e0e30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1858052401526269404, guid: 8951829211696d946a378206932e0e30, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1787,6 +1807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4387299536374444812, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: MaxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444812, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: DeathCanvas
       value: 
@@ -25112,6 +25136,10 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7555025914969405286, guid: e22fe3c495df295489a335f86613e131, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     - target: {fileID: 9096634540044921538, guid: e22fe3c495df295489a335f86613e131, type: 3}
       propertyPath: ObjectPoints.Array.data[0]
       value: 

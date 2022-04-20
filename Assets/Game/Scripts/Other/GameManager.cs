@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
     }
     public void Replay()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void MainMenu()
