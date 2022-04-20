@@ -23,9 +23,11 @@ public class DoorController : MonoBehaviour
         if(isOpen == false)
         {
             isOpen = true;
-            //DoorPair.SetActive(false);
             var temp = DoorPair.GetComponent<Animator>();
-            temp.SetTrigger("DoorSwitch");
+            if(temp == null)
+                DoorPair.SetActive(false);
+            else
+                temp.SetTrigger("DoorSwitch");
 
             Invoke("Test", 1);
         }
