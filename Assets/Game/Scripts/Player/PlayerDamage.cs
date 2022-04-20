@@ -40,7 +40,7 @@ public class PlayerDamage : MonoBehaviour
         // checks if the enemy tag hits the player might be a bug if the same enemy bumps in to the player twice 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("hit");
+            //Debug.Log("hit");
             TakePlayerDamage(DamageTaken);
         }
     }
@@ -54,7 +54,7 @@ public class PlayerDamage : MonoBehaviour
             HitInterval = Time.time + HitDelay;
             if (Health <= 0)
             {
-                Debug.Log("Dead");
+                //Debug.Log("Dead");
                 // stops player And Ai from moving  
                 GetComponent<PlayerMovement>().TogleCanMove(false);
                 var temp = FindObjectsOfType<AIPath>();

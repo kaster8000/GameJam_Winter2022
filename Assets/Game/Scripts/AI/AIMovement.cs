@@ -15,7 +15,7 @@ public class AIMovement : MonoBehaviour
     public bool RandomStart;
     public List<GameObject> ObjectPoints;
     public int ObjectInt;
-    
+    bool CanChange;
 
     void Start()
     {
@@ -45,19 +45,26 @@ public class AIMovement : MonoBehaviour
             // set the AI target to the game object in the array 
             M_AIDestinationSetter.target = ObjectPoints[ObjectInt].transform;
             // checks to see if the AI is at the Object in the arry then change the object to target
-            if (M_AIPath.remainingDistance <= 1) 
+            if (M_AIPath.remainingDistance <= 1 && CanChange) 
             {
 
                 if (ObjectInt != ObjectPoints.Count - 1)
                 {
-   
+
                     ObjectInt++;
+                    
+
                 }
                 else
                 {
       
                     ObjectInt = 0;
                 }
+                CanChange = false;
+            }
+            else
+            {
+                CanChange = true;
             }
         }
         else
