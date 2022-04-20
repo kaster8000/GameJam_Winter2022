@@ -4,7 +4,7 @@ using UnityEngine;
 using Pathfinding;
 public class AIMovement : MonoBehaviour
 {
-
+    public bool CanTargetPlayer;
     public bool GoForPlayer;
     public float PlayerHuntingSpeed;
     public float NromalHuntingSpeed;
@@ -74,7 +74,8 @@ public class AIMovement : MonoBehaviour
     public void TogleHuntingPlayer(bool i)
     {
         //Debug.Log("Called " + i);
-        GoForPlayer = i;
+        if(CanTargetPlayer)
+            GoForPlayer = i;
     }
 
 }

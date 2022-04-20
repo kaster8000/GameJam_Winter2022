@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f79d25ee3e46842b3e834cea3e65e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTargetPlayer: 1
   GoForPlayer: 0
   PlayerHuntingSpeed: 18
   NromalHuntingSpeed: 8
