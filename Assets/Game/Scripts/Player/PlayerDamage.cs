@@ -13,8 +13,12 @@ public class PlayerDamage : MonoBehaviour
     public bool InCover;
     public LayerMask GroundCheck;
     public GameObject DeathCanvas;
+    GameManager M_GameManager;
+    AudioManager M_AudioManager;
     void Start()
     {
+        M_GameManager = FindObjectOfType<GameManager>();
+        M_AudioManager = M_GameManager.GlobalAudioManager;
         DeathCanvas.SetActive(false);
         Health = MaxHealth;
         HitInterval = Time.time + HitDelay;
@@ -63,6 +67,8 @@ public class PlayerDamage : MonoBehaviour
                     t.canMove = false;
                 }
                 // play partical or animation
+                
+                M_AudioManager.PlaySoundWait("DeathSound");
                 Invoke("DeathMenu", 1);
             }
 

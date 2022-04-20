@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de09e2bf7cd8b2488d3d16fb403de73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 10
+  MaxHealth: 1
   Health: 0
   DamageTaken: 1
   HitDelay: 0.5

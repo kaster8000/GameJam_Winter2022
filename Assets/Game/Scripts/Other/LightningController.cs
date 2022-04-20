@@ -68,7 +68,7 @@ public class LightningController : MonoBehaviour
             lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, warningIntensity, increaseSpeed * Time.deltaTime);
             if(M_AudioManager != null)
                 M_AudioManager.PlaySound("ThunderWarning");
-            Debug.Log("warning");
+            //Debug.Log("warning");
         }
         //base
         else if (Time.time < nextInterval)
@@ -85,7 +85,7 @@ public class LightningController : MonoBehaviour
             timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
             nextInterval = Time.time + timeInterval;
             HuntInterval = Time.time + EnemyHuntingTime;
-            Debug.Log("flash");
+            //Debug.Log("flash");
             LightingFlashed = true;
 
              UpdateEnemys(true);
