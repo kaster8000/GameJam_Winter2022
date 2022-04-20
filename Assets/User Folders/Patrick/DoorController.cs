@@ -23,14 +23,20 @@ public class DoorController : MonoBehaviour
         if(isOpen == false)
         {
             isOpen = true;
-            //DoorPair.SetActive(false);
             var temp = DoorPair.GetComponent<Animator>();
-            temp.SetTrigger("DoorSwitch");
-            
-            var GraphToScan = AstarPath.active.data.gridGraph;
-            Debug.Log(GraphToScan);
-            AstarPath.active.Scan(GraphToScan);
+            if(temp == null)
+                DoorPair.SetActive(false);
+            else
+                temp.SetTrigger("DoorSwitch");
+
+            Invoke("Test", 1);
         }
         
+    }
+    void Test()
+    {
+        var GraphToScan = AstarPath.active.data.gridGraph;
+        Debug.Log(GraphToScan);
+        AstarPath.active.Scan(GraphToScan);
     }
 }
