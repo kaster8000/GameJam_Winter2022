@@ -21,6 +21,7 @@ public class TextboxController : MonoBehaviour
 
     //for if you need to invoke a method from this script
     public string[] invokeMethodOnEnd;
+    public float invokeTime;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,7 @@ public class TextboxController : MonoBehaviour
             {
                 foreach (string str in invokeMethodOnEnd)
                 {
-                    Invoke(str, 0);
+                    Invoke(str, invokeTime);
                 } 
             }
         }
