@@ -26,11 +26,15 @@ public class DoorController : MonoBehaviour
             //DoorPair.SetActive(false);
             var temp = DoorPair.GetComponent<Animator>();
             temp.SetTrigger("DoorSwitch");
-            
-            var GraphToScan = AstarPath.active.data.gridGraph;
-            Debug.Log(GraphToScan);
-            AstarPath.active.Scan(GraphToScan);
+
+            Invoke("Test", 1);
         }
         
+    }
+    void Test()
+    {
+        var GraphToScan = AstarPath.active.data.gridGraph;
+        Debug.Log(GraphToScan);
+        AstarPath.active.Scan(GraphToScan);
     }
 }
