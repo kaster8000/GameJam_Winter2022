@@ -66,7 +66,7 @@ public class LightningController : MonoBehaviour
             //play lightning audio cue
             lightningLight.intensity = Mathf.Lerp(lightningLight.intensity, warningIntensity, increaseSpeed * Time.deltaTime);
             if(M_AudioManager != null)
-                M_AudioManager.PlaySound("ThunderWarning");
+                M_AudioManager.PlaySoundWait("ThunderWarning");
             //Debug.Log("warning");
         }
         //base

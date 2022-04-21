@@ -45,7 +45,7 @@ public class AIMovement : MonoBehaviour
             // set the AI target to the game object in the array 
             M_AIDestinationSetter.target = ObjectPoints[ObjectInt].transform;
             // checks to see if the AI is at the Object in the arry then change the object to target
-            if (M_AIPath.remainingDistance <= 1 && CanChange) 
+            if (M_AIPath.reachedEndOfPath == true && CanChange == true) 
             {
 
                 if (ObjectInt != ObjectPoints.Count - 1)
