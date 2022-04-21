@@ -44,8 +44,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Music:
+  - Name: Rain
+    clip: {fileID: 8300000, guid: a45edaad8fb89e64bb69006c2e8736f6, type: 3}
+    source: {fileID: 0}
+    mixer: {fileID: -3579451496357051588, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 1
+  - Name: BGM
+    clip: {fileID: 8300000, guid: ec6308d868bc97e4681c17d97155bb7b, type: 3}
+    source: {fileID: 0}
+    mixer: {fileID: 78188268494105324, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 1
   - Name: 
     clip: {fileID: 0}
     source: {fileID: 0}
     mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
-    IsLoop: 0
+    IsLoop: 1
