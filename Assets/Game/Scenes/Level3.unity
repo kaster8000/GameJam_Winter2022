@@ -174,6 +174,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
+      propertyPath: SoundsList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
+      propertyPath: SoundsList.Array.data[5].Name
+      value: BushEnter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
+      propertyPath: SoundsList.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
+      propertyPath: SoundsList.Array.data[5].mixer
+      value: 
+      objectReference: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     - target: {fileID: 1718916314248343799, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -18212,6 +18228,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6114583787546767657, guid: 21d3e29db0e66a843bcfc369b82b50cc, type: 3}
+      propertyPath: Music.Array.data[2].Name
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114583787546767657, guid: 21d3e29db0e66a843bcfc369b82b50cc, type: 3}
+      propertyPath: Music.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 64d0ced7f5e333340a0c45b6f2afb807, type: 3}
     - target: {fileID: 6114583787546767662, guid: 21d3e29db0e66a843bcfc369b82b50cc, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -18379,6 +18403,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7555025914969405286, guid: e22fe3c495df295489a335f86613e131, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555025914969405286, guid: e22fe3c495df295489a335f86613e131, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.6611938
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555025914969405286, guid: e22fe3c495df295489a335f86613e131, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555025914969405286, guid: e22fe3c495df295489a335f86613e131, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.24084148
+      objectReference: {fileID: 0}
     - target: {fileID: 9096634540044921538, guid: e22fe3c495df295489a335f86613e131, type: 3}
       propertyPath: RandomStart
       value: 0

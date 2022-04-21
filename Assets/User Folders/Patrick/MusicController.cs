@@ -59,6 +59,13 @@ public class MusicController : MonoBehaviour
         }
     }
 
+    public void StopAllMusic()
+    {
+        foreach (Sound s in Music)
+        {
+            s.source.Stop();
+        }
+    }
     
 
     public int FindVal(string Name)

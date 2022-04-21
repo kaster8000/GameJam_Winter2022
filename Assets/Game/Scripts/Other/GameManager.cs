@@ -40,6 +40,13 @@ public class GameManager : MonoBehaviour
         PauseCanvas.SetActive(false);
         OptionsLayout.SetActive(false);
         GoalUnlocked = false;
+        if(!GlobalMusicController.Music[GlobalMusicController.FindVal("Rain")].source.isPlaying)
+            GlobalMusicController.PlayeMusic("Rain");
+        if(!GlobalMusicController.Music[GlobalMusicController.FindVal("BGM")].source.isPlaying)
+            GlobalMusicController.PlayeMusic("BGM");
+
+
+
         var temp = GameObject.FindGameObjectsWithTag("PickUp");
         foreach (GameObject i in temp)
         {
@@ -89,11 +96,19 @@ public class GameManager : MonoBehaviour
     }
     public void Replay()
     {
+        
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void MainMenu()
     {
+        GlobalMusicController.StopAllMusic();
+        Time.timeScale = 0.2f;
+        Invoke("MainMenuDelay", 0.1f);
+    }
+    public void MainMenuDelay()
+    {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
     public void TogleOptions(bool i)
