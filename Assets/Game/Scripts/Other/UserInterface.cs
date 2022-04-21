@@ -16,17 +16,24 @@ public class UserInterface : MonoBehaviour
 
     private void Start()
     {
-        if(PlayerPrefs.GetInt("FlashSave") == 0)
+        if (Flashtext != null)
         {
-            FlashTogle = false;
-            Flashtext.SetText("Disabled");
+            if (PlayerPrefs.GetInt("FlashSave") == 0)
+            {
+                FlashTogle = false;
+                Flashtext.SetText("Disabled");
+            }
+            else if (PlayerPrefs.GetInt("FlashSave") == 1)
+            {
+                FlashTogle = true;
+                Flashtext.SetText("Enabled");
+            }
         }
-        else if (PlayerPrefs.GetInt("FlashSave") == 1)
-        {
-            FlashTogle = true;
-            Flashtext.SetText("Enabled");
-        }
-        OptionsMenu.SetActive(false);
+        else
+            Debug.Log("Flashtext = Null");
+        
+        if(OptionsMenu != null)
+            OptionsMenu.SetActive(false);
     }
     public static void QuitGame()
     {
