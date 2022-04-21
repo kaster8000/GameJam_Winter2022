@@ -67,7 +67,7 @@ public class PlayerDamage : MonoBehaviour
                     t.canMove = false;
                 }
                 // play partical or animation
-                
+                M_GameManager.CanPause = false;
                 M_AudioManager.PlaySoundWait("DeathSound");
                 Invoke("DeathMenu", 1);
             }

@@ -18,13 +18,14 @@ public class GameManager : MonoBehaviour
     public GameObject OptionsLayout;
     public TextMeshProUGUI Flashtext;
     bool IsGamePaused;
+    public bool CanPause = true;
     bool FlashTogle;
     private void Awake()
     {
 
         GlobalAudioManager = FindObjectOfType<AudioManager>();
         GlobalMusicController = FindObjectOfType<MusicController>();
-
+        //CanPause = true;
 
         if (PlayerPrefs.GetInt("FlashSave") == 0)
         {
@@ -69,18 +70,22 @@ public class GameManager : MonoBehaviour
     public void PauseTogle(bool pauseState)
     {
         IsGamePaused = pauseState;
-        if(IsGamePaused)
+        if(CanPause)
         {
-            // pause
-            Time.timeScale = 0;
-            PauseCanvas.SetActive(true);
+            if (IsGamePaused)
+            {
+                // pause
+                Time.timeScale = 0;
+                PauseCanvas.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                PauseCanvas.SetActive(false);
+                //unpause
+            }
         }
-        else
-        {
-            Time.timeScale = 1;
-            PauseCanvas.SetActive(false);
-            //unpause
-        }
+        
     }
     public void Replay()
     {
