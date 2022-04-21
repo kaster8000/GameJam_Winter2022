@@ -987,26 +987,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
-      propertyPath: SoundsList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
-      propertyPath: SoundsList.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3493e917a1e178a47bd6c35ef5d8e222, type: 3}
-    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
-      propertyPath: SoundsList.Array.data[2].Name
-      value: DeathSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
-      propertyPath: SoundsList.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 231483340e6212b4197227ddd2583f81, type: 3}
-    - target: {fileID: 1718916314248343797, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
-      propertyPath: SoundsList.Array.data[2].mixer
-      value: 
-      objectReference: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     - target: {fileID: 1718916314248343799, guid: f0265e091e7a1b14aaea551c05f2cced, type: 3}
       propertyPath: m_Name
       value: AudioManager

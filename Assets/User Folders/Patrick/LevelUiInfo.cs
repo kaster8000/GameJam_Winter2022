@@ -34,7 +34,7 @@ public class LevelUiInfo : MonoBehaviour
     void LoadSelectedLevel()
     {
         Debug.Log(SceneName);
-        SceneManager.LoadScene("LoaderScene");
+        SceneManager.LoadScene(SceneName);
 
 
     }
