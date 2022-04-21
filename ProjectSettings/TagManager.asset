@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PartialLit
+    uniqueID: 3006321135
+    locked: 0
