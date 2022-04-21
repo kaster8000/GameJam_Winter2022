@@ -7,6 +7,7 @@ public class PickUpScript : MonoBehaviour
 {
     
     GameManager M_GameManager;
+    AudioManager M_AudioManager;
     GameObject progressBarObj;
     public Image progressImage;
     public float progressIncrement; //determines how fast progress bar fills up
@@ -15,6 +16,7 @@ public class PickUpScript : MonoBehaviour
     void Start()
     {
         M_GameManager = FindObjectOfType<GameManager>();
+        M_AudioManager = M_GameManager.GlobalAudioManager;
         progressBarObj = progressImage.transform.parent.gameObject;
     }
 
@@ -28,6 +30,7 @@ public class PickUpScript : MonoBehaviour
         else if (collision.gameObject.CompareTag("Player"))
         {
             M_GameManager.AddPickUpCounter(1);
+            M_AudioManager.PlaySound("PickUpSound");
             Destroy(this.transform.root.gameObject);
         }
     }
@@ -38,6 +41,7 @@ public class PickUpScript : MonoBehaviour
             if (progressImage.fillAmount >= 1)
             {
                 M_GameManager.AddPickUpCounter(1);
+                M_AudioManager.PlaySound("PickUpSound");
                 Destroy(this.transform.root.gameObject);
             }
             progressImage.fillAmount += progressIncrement;

@@ -53,25 +53,29 @@ public class PlayerDamage : MonoBehaviour
     {
         if(Time.time > HitInterval)
         {
-            // the logic for damage 
-            Health = Health - i;
-            HitInterval = Time.time + HitDelay;
-            if (Health <= 0)
+            if(InCover == false)
             {
-                //Debug.Log("Dead");
-                // stops player And Ai from moving  
-                GetComponent<PlayerMovement>().TogleCanMove(false);
-                var temp = FindObjectsOfType<AIPath>();
-                foreach( AIPath t in temp)
+                // the logic for damage 
+                Health = Health - i;
+                HitInterval = Time.time + HitDelay;
+                if (Health <= 0)
                 {
-                    t.canMove = false;
+                    //Debug.Log("Dead");
+                    // stops player And Ai from moving  
+                    GetComponent<PlayerMovement>().TogleCanMove(false);
+                    var temp = FindObjectsOfType<AIPath>();
+                    foreach (AIPath t in temp)
+                    {
+                        t.canMove = false;
+                    }
+                    // play partical or animation
+                    M_GameManager.CanPause = false;
+                    M_AudioManager.PlaySoundWait("DeathSound");
+                    Invoke("DeathMenu", 1);
                 }
-                // play partical or animation
-                M_GameManager.CanPause = false;
-                M_AudioManager.PlaySoundWait("DeathSound");
-                Invoke("DeathMenu", 1);
-            }
 
+
+            }
         }
        
     }

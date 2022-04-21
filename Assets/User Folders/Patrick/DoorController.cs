@@ -4,9 +4,16 @@ using UnityEngine;
 using Pathfinding;
 public class DoorController : MonoBehaviour
 {
+    GameManager M_GameManager;
+    AudioManager M_AudioManager;
     public GameObject DoorPair;
     bool isOpen = false;
 
+    private void Start()
+    {
+        M_GameManager = FindObjectOfType<GameManager>();
+        M_AudioManager = M_GameManager.GlobalAudioManager;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,12 +35,12 @@ public class DoorController : MonoBehaviour
                 DoorPair.SetActive(false);
             else
                 temp.SetTrigger("DoorSwitch");
-
-            Invoke("Test", 1);
+            M_AudioManager.PlaySound("Pad Unlocked");
+            Invoke("GridUpdate", 1);
         }
         
     }
-    void Test()
+    void GridUpdate()
     {
         var GraphToScan = AstarPath.active.data.gridGraph;
         Debug.Log(GraphToScan);

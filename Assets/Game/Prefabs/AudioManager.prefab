@@ -59,3 +59,13 @@ MonoBehaviour:
     source: {fileID: 0}
     mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 0
+  - Name: PickUpSound
+    clip: {fileID: 8300000, guid: d308e368e582df34da2d8ba3fe1179fd, type: 3}
+    source: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 0
+  - Name: Pad Unlocked
+    clip: {fileID: 8300000, guid: 79f851e0295dffe438ee0eef2468b247, type: 3}
+    source: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 0
