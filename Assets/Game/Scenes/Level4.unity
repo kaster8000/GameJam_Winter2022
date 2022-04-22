@@ -739,12 +739,20 @@ PrefabInstance:
       value: DoorHolder (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.12822326
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.119552
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.92
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: 0.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
@@ -1608,6 +1616,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.32464805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18326804
+      objectReference: {fileID: 0}
     - target: {fileID: 8516574258913699380, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
       propertyPath: m_Name
       value: DoorPad (1)
@@ -1699,6 +1719,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2218665
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.17856885
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6226415
+      objectReference: {fileID: 0}
     - target: {fileID: 8516574258913699380, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
       propertyPath: m_Name
       value: DoorPad
@@ -1785,7 +1817,7 @@ Transform:
   m_LocalScale: {x: 84.053, y: 84.053, z: 84.053}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &977781370
 GameObject:
@@ -34773,6 +34805,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.13956285
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1102645
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0227
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.27282783
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.25564253
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
 --- !u!1 &1159513997 stripped
@@ -34844,7 +34904,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209425522
 PrefabInstance:
@@ -35284,6 +35344,34 @@ PrefabInstance:
     - target: {fileID: 3220746609763842531, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_Name
       value: DoorHolder (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14262503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8588718
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038794, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.390566
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.42600352
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
@@ -39757,6 +39845,18 @@ PrefabInstance:
     - target: {fileID: 8516574258913699370, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.67058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.26454347
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516574258913699371, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.07843135
       objectReference: {fileID: 0}
     - target: {fileID: 8516574258913699380, guid: 170d90a3aa275eb49a3d2289e036b22d, type: 3}
       propertyPath: m_Name
