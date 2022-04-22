@@ -70,7 +70,12 @@ MonoBehaviour:
     mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 0
   - Name: BushEnter
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: ee5c7d385118de847bbad58f08e8fbd5, type: 3}
     source: {fileID: 0}
-    mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    mixer: {fileID: 4132971721665345534, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 0
+  - Name: BushExit
+    clip: {fileID: 8300000, guid: 50f01a6e6a348584f8d05e517161fe71, type: 3}
+    source: {fileID: 0}
+    mixer: {fileID: 4132971721665345534, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 0

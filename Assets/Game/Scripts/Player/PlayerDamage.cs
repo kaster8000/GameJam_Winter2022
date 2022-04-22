@@ -31,11 +31,13 @@ public class PlayerDamage : MonoBehaviour
         {
             //Debug.Log("in Cover");
             InCover = true;
+            
         }
         else
         {
             //Debug.Log("OutCover");
             InCover = false;
+            
         }
     }
 
