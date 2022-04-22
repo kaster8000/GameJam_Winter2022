@@ -127,6 +127,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   DeathCanvas: {fileID: 0}
+  Fast: {fileID: 4387299536374444813}
 --- !u!81 &859406812736880516
 AudioListener:
   m_ObjectHideFlags: 0

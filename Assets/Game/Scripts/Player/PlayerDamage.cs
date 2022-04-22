@@ -13,6 +13,7 @@ public class PlayerDamage : MonoBehaviour
     public bool InCover;
     public LayerMask GroundCheck;
     public GameObject DeathCanvas;
+    public GameObject Fast;
     GameManager M_GameManager;
     AudioManager M_AudioManager;
     void Start()
@@ -28,7 +29,7 @@ public class PlayerDamage : MonoBehaviour
 
     private void Update()
     {
-        Collider2D GroundRay = Physics2D.OverlapCircle(this.transform.position, 0.2f, GroundCheck);
+        Collider2D GroundRay = Physics2D.OverlapCircle(Fast.gameObject.transform.position, 0.5f, GroundCheck);
         if (GroundRay != null)
         {
             //Debug.Log("in Cover");
