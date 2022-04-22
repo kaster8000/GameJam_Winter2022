@@ -48,6 +48,10 @@ public class UserInterface : MonoBehaviour
             if (!M_MusicController.Music[M_MusicController.FindVal("CreditsSong")].source.isPlaying && M_MusicController != null)
             {
                 M_MusicController.PlayeMusic("CreditsSong");
+                if (M_MusicController.Music[M_MusicController.FindVal("MainMenu")].source.isPlaying && M_MusicController != null)
+                {
+                    M_MusicController.StopMusic("MainMenu");
+                }
             }
         }
         else
