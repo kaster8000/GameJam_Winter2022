@@ -16,6 +16,7 @@ public class AIMovement : MonoBehaviour
     public List<GameObject> ObjectPoints;
     public int ObjectInt;
     bool CanChange;
+    public Animator myAnim;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class AIMovement : MonoBehaviour
         {
 
             // set the speed when the AI is not hunting the player
+            myAnim.speed = 1.3f;
             M_AIPath.maxSpeed = NromalHuntingSpeed;
 
             // set the AI target to the game object in the array 
@@ -71,6 +73,7 @@ public class AIMovement : MonoBehaviour
         {
 
             // gose ham on player
+            myAnim.speed = 3;
             M_AIPath.maxSpeed = PlayerHuntingSpeed;
             M_AIDestinationSetter.target = Player.transform;
         }
