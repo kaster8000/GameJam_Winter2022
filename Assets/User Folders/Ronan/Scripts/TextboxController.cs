@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Pathfinding;
 
 public class TextboxController : MonoBehaviour
 {
@@ -24,10 +25,15 @@ public class TextboxController : MonoBehaviour
     //for if you need to invoke a method from this script
     public string[] invokeMethodOnEnd;
     public float invokeTime;
+    public bool doPause;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (doPause)
+        {
+            aiMove.gameObject.GetComponent<AIPath>().canMove = false;
+        }
         //cinematicBars.SetActive(true);
         pm.CanMove = false;
         thisAnim = GetComponent<Animator>();
@@ -88,5 +94,10 @@ public class TextboxController : MonoBehaviour
     void TriggerLightning()
     {
         lc.SetNextInterval(Time.time + 3f);
+    }
+
+    void TogglePause()
+    {
+        aiMove.gameObject.GetComponent<AIPath>().canMove = true;
     }
 }
