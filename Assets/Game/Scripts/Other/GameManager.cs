@@ -76,6 +76,12 @@ public class GameManager : MonoBehaviour
     public void AddPickUpCounter(int i)
     {
         PickUpCount = PickUpCount + i;
+
+        if (PickUpCount >= TotalFoundPickUp)
+        {
+            GoalUnlocked = true;
+            GlobalAudioManager.PlaySound("PickupsDone");
+        }
     }
 
     public void PauseTogle(bool pauseState)

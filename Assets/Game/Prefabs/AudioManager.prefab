@@ -79,3 +79,8 @@ MonoBehaviour:
     source: {fileID: 0}
     mixer: {fileID: 4132971721665345534, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 0
+  - Name: PickupsDone
+    clip: {fileID: 8300000, guid: ed98290f8d1bd0c4c85e629e202a43c1, type: 3}
+    source: {fileID: 0}
+    mixer: {fileID: 4132971721665345534, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 0
