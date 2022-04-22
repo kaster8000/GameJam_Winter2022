@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220746609763842530, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.17
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 3220746609763842530, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29586,7 +29586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220746609763842530, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.41
+      value: 13.69
       objectReference: {fileID: 0}
     - target: {fileID: 3220746609763842530, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29624,6 +29624,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorHolder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038793, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038793, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_Color.b
       value: 0.8773585
@@ -29635,6 +29643,10 @@ PrefabInstance:
     - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
       propertyPath: m_Color.r
       value: 0.25989673
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220746610160038795, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1293e469e5a0e4f86b9536c22dd0b0, type: 3}
