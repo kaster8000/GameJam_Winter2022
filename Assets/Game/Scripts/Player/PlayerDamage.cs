@@ -18,8 +18,10 @@ public class PlayerDamage : MonoBehaviour
     void Start()
     {
         M_GameManager = FindObjectOfType<GameManager>();
-        M_AudioManager = M_GameManager.GlobalAudioManager;
-        DeathCanvas.SetActive(false);
+        if(M_GameManager != null)
+            M_AudioManager = M_GameManager.GlobalAudioManager;
+        if(DeathCanvas != null)
+            DeathCanvas.SetActive(false);
         Health = MaxHealth;
         HitInterval = Time.time + HitDelay;
     }
