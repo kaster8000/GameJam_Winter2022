@@ -1594,27 +1594,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsList:
   - levelName: Level 1
-    levelIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    levelIcon: {fileID: 21300000, guid: 4f76a02d8cb79fd408c4780cf0454062, type: 3}
     levelDifficulty: 0
     sceneName: ExposScene
   - levelName: Level 2
-    levelIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    levelIcon: {fileID: 21300000, guid: 9fe186dac827df5439be9bdc76b28117, type: 3}
     levelDifficulty: 1
     sceneName: Tutorial
   - levelName: Level 3
-    levelIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    levelIcon: {fileID: 21300000, guid: 2cf543835139bb049a135aa43f545fb4, type: 3}
     levelDifficulty: 2
     sceneName: Level2
   - levelName: Level 4
-    levelIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    levelIcon: {fileID: 21300000, guid: fb911703339ab5e4bbf6322ffb616b4c, type: 3}
     levelDifficulty: 3
     sceneName: Level3
   - levelName: Level 5
-    levelIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    levelIcon: {fileID: 21300000, guid: 6e9775576f596b84184fe4ed09c5eea5, type: 3}
     levelDifficulty: 4
     sceneName: Level4
   - levelName: Level 6
-    levelIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    levelIcon: {fileID: 21300000, guid: 06dcf2e86b5c39943bb8f14d4078e1a3, type: 3}
     levelDifficulty: 5
     sceneName: EndScene
   LevelItemUiprefab: {fileID: 6716909491513385554, guid: abe7e7b545a03464db9d360102e52a25, type: 3}
