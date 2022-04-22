@@ -3478,7 +3478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeText: {fileID: 844484830}
-  invokeTime: 3.2
+  invokeTime: 1
 --- !u!1 &1375387516
 GameObject:
   m_ObjectHideFlags: 0
