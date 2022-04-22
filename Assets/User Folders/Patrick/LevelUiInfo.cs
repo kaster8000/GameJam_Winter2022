@@ -21,8 +21,6 @@ public class LevelUiInfo : MonoBehaviour
     public void Initalize(Levels M_levelData)
     {
         LevelNameTMP.text = M_levelData.levelName;
-        LevelDesTMP.text = M_levelData.levelDesc;
-        isPlayedGO.SetActive(M_levelData.isPlayed);
         Icon.sprite = M_levelData.levelIcon;
 
         SceneName = M_levelData.sceneName;
