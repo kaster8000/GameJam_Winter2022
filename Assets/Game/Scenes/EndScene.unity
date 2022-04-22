@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1420456823}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0995878a7baae94898da6073c3dfcf3, type: 3}
   m_Name: 
@@ -7328,6 +7328,7 @@ MonoBehaviour:
   invokeMethodOnEnd:
   - PlayAnim
   invokeTime: 0
+  doPause: 0
 --- !u!114 &1365686654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7527,6 +7528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4387299536374444812, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444813, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7535,17 +7540,29 @@ PrefabInstance:
       propertyPath: CanMove
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444848, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444850, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.260302
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0964492
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7577,6 +7594,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444855, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8883,6 +8904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c3bdffc25cb3e49905ec840ae526f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: CreditsScene
 --- !u!1 &1726499815
 GameObject:
   m_ObjectHideFlags: 0

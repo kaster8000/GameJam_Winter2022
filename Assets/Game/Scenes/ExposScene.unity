@@ -6266,6 +6266,7 @@ MonoBehaviour:
   invokeMethodOnEnd:
   - PlayAnim
   invokeTime: 0
+  doPause: 0
 --- !u!114 &590063777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9384,21 +9385,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4387299536374444812, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444813, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444848, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: CanMove
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444848, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444848, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: facingRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444850, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.132404
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0462031
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4387299536374444851, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9432,6 +9457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4387299536374444855, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da49585afcc25d4d81f396d1a16a897, type: 3}
 --- !u!114 &2014287711 stripped
@@ -9440,7 +9469,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2014287710}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0995878a7baae94898da6073c3dfcf3, type: 3}
   m_Name: 
