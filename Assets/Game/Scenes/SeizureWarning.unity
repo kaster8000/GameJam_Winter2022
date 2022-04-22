@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: disable
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 736417ff3d8e81a46a4ded01a4529ee6, type: 2}
   m_sharedMaterial: {fileID: -4690582033365003149, guid: 736417ff3d8e81a46a4ded01a4529ee6, type: 2}
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -493,6 +493,7 @@ MonoBehaviour:
   OptionsMenu: {fileID: 0}
   MainMenu: {fileID: 0}
   Flashtext: {fileID: 311477186}
+  PlayCreditsSong: 0
 --- !u!114 &394044400
 MonoBehaviour:
   m_ObjectHideFlags: 0

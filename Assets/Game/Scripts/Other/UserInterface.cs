@@ -14,17 +14,12 @@ public class UserInterface : MonoBehaviour
     public GameObject MainMenu;
     bool FlashTogle;
     public TextMeshProUGUI Flashtext;
+    public bool PlayCreditsSong;
 
     private void Start()
     {
         M_MusicController = FindObjectOfType<MusicController>();
 
-        if (!M_MusicController.Music[M_MusicController.FindVal("MainMenu")].source.isPlaying && M_MusicController!= null)
-        {
-            M_MusicController.PlayeMusic("MainMenu");
-        }
-        
-        
         if (Flashtext != null)
         {
             if (PlayerPrefs.GetInt("FlashSave") == 0)
@@ -43,6 +38,34 @@ public class UserInterface : MonoBehaviour
         
         if(OptionsMenu != null)
             OptionsMenu.SetActive(false);
+
+
+        if (M_MusicController == null)
+            return;
+
+        if(PlayCreditsSong == true)
+        {
+            if (!M_MusicController.Music[M_MusicController.FindVal("CreditsSong")].source.isPlaying && M_MusicController != null)
+            {
+                M_MusicController.PlayeMusic("CreditsSong");
+            }
+        }
+        else
+        {
+            if (M_MusicController.Music[M_MusicController.FindVal("CreditsSong")].source.isPlaying && M_MusicController != null)
+            {
+                M_MusicController.StopMusic("CreditsSong");
+            }
+
+            if (!M_MusicController.Music[M_MusicController.FindVal("MainMenu")].source.isPlaying && M_MusicController != null)
+            {
+                M_MusicController.PlayeMusic("MainMenu");
+            }
+        }
+        
+
+
+
     }
     public static void QuitGame()
     {
