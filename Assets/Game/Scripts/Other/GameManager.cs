@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
         PauseCanvas.SetActive(false);
         OptionsLayout.SetActive(false);
         GoalUnlocked = false;
+
+        if (GlobalMusicController.Music[GlobalMusicController.FindVal("MainMenu")].source.isPlaying)
+            GlobalMusicController.StopMusic("MainMenu");
+
         if(!GlobalMusicController.Music[GlobalMusicController.FindVal("Rain")].source.isPlaying)
             GlobalMusicController.PlayeMusic("Rain");
         if(!GlobalMusicController.Music[GlobalMusicController.FindVal("BGM")].source.isPlaying)

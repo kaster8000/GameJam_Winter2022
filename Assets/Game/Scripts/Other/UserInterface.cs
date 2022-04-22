@@ -9,6 +9,7 @@ using TMPro;
 
 public class UserInterface : MonoBehaviour
 {
+    MusicController M_MusicController;
     public GameObject OptionsMenu;
     public GameObject MainMenu;
     bool FlashTogle;
@@ -16,6 +17,14 @@ public class UserInterface : MonoBehaviour
 
     private void Start()
     {
+        M_MusicController = FindObjectOfType<MusicController>();
+
+        if (!M_MusicController.Music[M_MusicController.FindVal("MainMenu")].source.isPlaying && M_MusicController!= null)
+        {
+            M_MusicController.PlayeMusic("MainMenu");
+        }
+        
+        
         if (Flashtext != null)
         {
             if (PlayerPrefs.GetInt("FlashSave") == 0)

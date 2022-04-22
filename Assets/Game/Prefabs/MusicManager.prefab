@@ -54,8 +54,8 @@ MonoBehaviour:
     source: {fileID: 0}
     mixer: {fileID: 78188268494105324, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 1
-  - Name: 
-    clip: {fileID: 0}
+  - Name: MainMenu
+    clip: {fileID: 8300000, guid: 64d0ced7f5e333340a0c45b6f2afb807, type: 3}
     source: {fileID: 0}
     mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 1

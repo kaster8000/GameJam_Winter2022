@@ -69,3 +69,8 @@ MonoBehaviour:
     source: {fileID: 0}
     mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
     IsLoop: 0
+  - Name: BushEnter
+    clip: {fileID: 0}
+    source: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fb82314442c1b7f44a09b481d70fd76a, type: 2}
+    IsLoop: 0
