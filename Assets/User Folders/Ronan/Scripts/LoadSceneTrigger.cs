@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LoadSceneTrigger : MonoBehaviour
 {
+    public string level = "CreditsScene";
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +13,6 @@ public class LoadSceneTrigger : MonoBehaviour
 
     void LoadScene()
     {
-        UserInterface.LoadLevel("CreditsScene");
+        UserInterface.LoadLevel(level);
     }
 }
